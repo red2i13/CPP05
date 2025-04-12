@@ -7,6 +7,7 @@ Bureaucrat::Bureaucrat(void) {
 	grade = 150;
 }
 Bureaucrat::Bureaucrat(std::string name, int grade){
+	std::cout << "Constructor called for Bureaucrat class" << std::endl;
 	if(grade < 1 )
 		throw GradeTooHighException();
 	else if(grade > 150)
@@ -64,4 +65,13 @@ void  Bureaucrat::decre_grade(){
 std::ostream& operator<< (std::ostream& COUT, const Bureaucrat &obj){
 	COUT << obj.getName() << ", bureaucrat grade " << obj.getGrade();
 	return(COUT);
+}
+
+void Bureaucrat::signForm(Form &obj){
+	if(obj.getBool() == true)
+		std::cout << this->getName() << " signed " << obj.getName() << std::endl;
+	else
+	std::cout << this->getName() << " couldn’t sign " << obj.getName() << \
+" because he hasn't signed it yet." << std::endl;
+
 }
