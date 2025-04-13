@@ -9,7 +9,7 @@ Form::Form(void) : _name("Default"),  Min_sign(150), Min_exec(150){
 Form::Form(Form const &copy) : _name(copy.getName()), Min_sign(copy.get_Min_sign()), Min_exec(copy.get_Min_exec())
 {
 	std::cout << "Default copy constructor Form is called" << std::endl;
-
+	is_Signed = copy.is_Signed;
 
 }
 
@@ -21,6 +21,7 @@ Form::~Form(void) {
 Form const	&Form::operator = (Form const &other){
 	(void)other;
 	std::cout << "Default copy assingment Form is called" << std::endl;
+	this->is_Signed = other.is_Signed;
 	return (*this);
 }
 Form::Form(std::string name, int s, int e): _name(name), Min_sign(s), Min_exec(e){
