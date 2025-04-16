@@ -1,7 +1,7 @@
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++
 NAME = Form
-FILES = main.cpp Bureaucrat.cpp Form.cpp
+FILES = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp
 OBJECTS = $(FILES:.cpp=.o)
 
 all: $(NAME)

@@ -2,11 +2,11 @@
 # define BUREAUCRAT_HPP
 #include <iostream>
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
 class Bureaucrat{
 	private:
-		std::string _name;
+		const std::string _name;
 		int grade;
 	public :
 	Bureaucrat(void);
@@ -19,7 +19,8 @@ class Bureaucrat{
 	int getGrade() const;
 	void incre_grade();
 	void decre_grade();
-	void signForm(Form &obj);
+	void signForm(AForm &obj);
+	void executeForm(AForm const & form);
 	class GradeTooHighException : public std::exception{
 		virtual const char* what() const throw();
 	};
