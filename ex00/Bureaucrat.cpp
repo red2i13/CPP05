@@ -1,24 +1,21 @@
 #include "Bureaucrat.hpp"
-//Todo dont forget to throw an exception in the constructor is the grade doesn't follow the rules
 
-Bureaucrat::Bureaucrat(void) {
+Bureaucrat::Bureaucrat(void) : _name("Default_name")
+{
 	std::cout << "Default constructor called for Bureaucrat class" << std::endl;
-	_name = "Default_name";
 	grade = 150;
 }
-Bureaucrat::Bureaucrat(std::string name, int grade){
+Bureaucrat::Bureaucrat(std::string name, int grade)	: _name(name){
 	if(grade < 1 )
 		throw GradeTooHighException();
 	else if(grade > 150)
 		throw GradeTooLowException();
 
-	_name = name;
 	this->grade = grade;
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const &copy)
+Bureaucrat::Bureaucrat(Bureaucrat const &copy):	_name (copy._name)
 {
-	_name = copy._name;
 	grade = copy.grade;
 	std::cout << "Copy constructor called for Bureaucrat class" << std::endl;
 }
@@ -29,7 +26,7 @@ Bureaucrat::~Bureaucrat(void) {
 
 Bureaucrat const	&Bureaucrat::operator = (Bureaucrat const &other)
 {
-	(void)other;
+	(*this).grade = other.grade;
 	std::cout << "Copy constructor called for Bureaucrat class" << std::endl;
 	return (*this);
 }

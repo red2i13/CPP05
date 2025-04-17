@@ -30,6 +30,7 @@ Form::Form(std::string name, int s, int e): _name(name), Min_sign(s), Min_exec(e
 		throw GradeTooHighException();
 	else if(Min_sign > 150 || Min_exec > 150)
 		throw GradeTooLowException();
+	is_Signed = false;
 
 }
 void Form::beSigned(const Bureaucrat &obj){

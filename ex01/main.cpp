@@ -4,8 +4,8 @@
 
 //todo dont forget to add exception in the constructor if the grades ar not crorrdct  
 int main(){
-	std::cout << "-----------------Grade of bereaucrat too high form constrctor-----------------\n";
-	try{
+
+		try{
 		Bureaucrat b("Sami", 1);
 		Form a("Watiqa", 5,0);
 		a.beSigned(b);
