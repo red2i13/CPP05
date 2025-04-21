@@ -15,7 +15,7 @@ class AForm {
 		AForm(void);
 		AForm(std::string name, int s, int e);
 		AForm(AForm const &copy);
-		~AForm(void);
+		virtual ~AForm(void);
 		AForm const &operator = (AForm const &other);
 		bool getBool_s() const;
 		std::string getName() const;

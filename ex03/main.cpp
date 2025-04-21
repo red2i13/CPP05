@@ -3,42 +3,22 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
-
+// dont forget to add in previous excercie virtual to aform destructor
 int main(){
 	try{
 
-		Bureaucrat f("mo7a", 145);
-		ShrubberyCreationForm F("sam");
-		F.beSigned(f);
-		f.signForm(F);
-		f.executeForm(F);
-	}
-	catch(std::exception & e){
-		std::cout << e.what() << std::endl;
-	}
+		Intern someRandomIntern;
+		AForm* rrf;
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+		if(rrf)
+			std::cout << rrf->getName() << std::endl;
+		delete rrf;
 
-	try{
-
-		Bureaucrat s("Jilali", 30);
-		RobotomyRequestForm R("titi");
-		R.beSigned(s);
-		s.signForm(R);
-		s.executeForm(R);
 	}
-	catch(std::exception & e){
-		std::cout << e.what() << std::endl;
-	}
-	try{
-
-		Bureaucrat s("Fadi", 5);
-		PresidentialPardonForm P("titi");
-		P.beSigned(s);
-		s.signForm(P);
-		s.executeForm(P);
-		
-	}
-	catch(std::exception & e){
+	catch(std::exception &e)
+	{
 		std::cout << e.what() << std::endl;
 	}
 }

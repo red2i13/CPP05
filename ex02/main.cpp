@@ -8,7 +8,7 @@
 int main(){
 	try{
 
-		Bureaucrat f("mo7a", 145);
+		Bureaucrat f("mo7a", 1);
 		ShrubberyCreationForm F("sam");
 		F.beSigned(f);
 		f.signForm(F);
