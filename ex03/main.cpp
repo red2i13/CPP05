@@ -5,7 +5,6 @@
 #include "PresidentialPardonForm.hpp"
 #include "Intern.hpp"
 
-// dont forget to add in previous excercie virtual to aform destructor
 int main(){
 	try{
 

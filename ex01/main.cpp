@@ -2,7 +2,6 @@
 #include "Form.hpp"
 
 
-//todo dont forget to add exception in the constructor if the grades ar not crorrdct  
 int main(){
 
 		try{
@@ -65,6 +64,7 @@ int main(){
 	try{
 		Bureaucrat b("Leo", 2);
 		Form a("Fiche", 2, 1);
+		std::cout << a << std::endl;
 		a.beSigned(b);
 		b.signForm(a);
 		

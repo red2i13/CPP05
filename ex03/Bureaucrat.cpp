@@ -1,5 +1,4 @@
 #include "Bureaucrat.hpp"
-//Todo dont forget to throw an exception in the constructor is the grade doesn't follow the rules
 
 Bureaucrat::Bureaucrat(void) : _name("Default_name"){
 	grade = 150;
